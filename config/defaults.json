@@ -1,0 +1,8 @@
+{
+  "sfv": {
+    "url": "http://localhost:8888/sfv/s2.2"
+  },
+  "assets": {
+    url: "https://s3.amazonaws.com/frda-assets"
+  }
+}

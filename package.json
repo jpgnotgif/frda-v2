@@ -1,0 +1,36 @@
+{
+  "name": "frda-v2",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "babel-jest": "^20.0.3",
+    "babel-preset-react-native": "^2.1.0",
+    "eslint": "^4.4.1",
+    "eslint-plugin-react": "^7.2.0",
+    "eslint-plugin-react-native": "^3.0.1",
+    "jest": "^20.0.4",
+    "jest-expo": "~19.0.0",
+    "react-native-scripts": "1.1.0",
+    "react-test-renderer": "^16.0.0-alpha.12"
+  },
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "scripts": {
+    "android": "react-native-scripts android",
+    "eject": "react-native-scripts eject",
+    "lint": "node_modules/eslint/bin/eslint.js *.js",
+    "ios": "react-native-scripts ios",
+    "start": "react-native-scripts start",
+    "test": "node node_modules/jest/bin/jest.js --watch"
+  },
+  "jest": {
+    "preset": "jest-expo"
+  },
+  "dependencies": {
+    "expo": "^19.0.0",
+    "immutable": "^3.8.1",
+    "native-base": "^2.3.1",
+    "react": "16.0.0-alpha.12",
+    "react-native": "^0.46.1",
+    "react-navigation": "^1.0.0-beta.11"
+  }
+}

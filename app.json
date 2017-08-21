@@ -1,0 +1,7 @@
+{
+  "name": "frda",
+  "displayName": "Frame Data Assistant",
+  "expo": {
+    "sdkVersion": "19.0.0"
+  }
+}
