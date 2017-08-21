@@ -23,8 +23,6 @@ export default class AttackName extends Component {
   normalize() {
     const moveName = this.name.split('.').slice(-1)[0]
 
-    console.log(`-> ${this.name}`)
-
     if (/stand/.test(this.name)) {
       return `st.${moveName}`
     } else if (/crouch/.test(this.name)) {

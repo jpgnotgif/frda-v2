@@ -23,6 +23,8 @@ import getTheme  from '../../native-base-theme/components'
 import platform  from '../../native-base-theme/variables/platform'
 import Character from './Character'
 
+import { Font } from 'expo'
+
 import CharacterSourceList from '../../data/characters'
 
 const apiUrl = config.sfv.url
@@ -38,6 +40,9 @@ export default class CharacterList extends Component {
   }
 
   componentDidMount() {
+    Font.loadAsync({
+      'Ionicons': require('../../assets/fonts/Ionicons.ttf')
+    })
     this.setState({
       data: OrderedMap(this.characters.sort().map(
         (name, index) => ([name, `${config.assets.url}/${name.toLowerCase()}.png`])

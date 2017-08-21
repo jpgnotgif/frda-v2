@@ -6,7 +6,7 @@ A mobile application to display SFV character frame data. Note this is updated v
 
 ## Why was this built?
 
-1. I want a programatic way to access frame data for the games that I :heart to play.
+1. I want a programatic way to access frame data for the games that I :heart: to play.
 2. I want a way to expose myself to unused technolog(y||ies)
 3. I want to introduce myself to mobile development
 
