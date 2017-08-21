@@ -23,45 +23,26 @@ import getTheme  from '../../native-base-theme/components'
 import platform  from '../../native-base-theme/variables/platform'
 import Character from './Character'
 
+import CharacterSourceList from '../../data/characters'
+
 const apiUrl = config.sfv.url
 
 export default class CharacterList extends Component {
   constructor(props) {
     super(props)
     this.navigation = this.props.navigation
+    this.characters = CharacterSourceList['characters']
     this.state = {
       data: OrderedMap()
     }
-    console.log(`api-url: ${apiUrl}`)
-  }
-
-  load() {
-    return fetch(`${apiUrl}/characters`, {
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      }
-    })
-    .then((response) => response.json())
-    .then((responseJson) => {
-      return responseJson.characters
-    })
-    .catch((error) => {
-      console.error(error)
-    })
   }
 
   componentDidMount() {
-    this.load()
-      .then((names) => {
-        this.setState({
-          data: OrderedMap(names.sort().map(
-            (name, index) => ([name, `${config.assets.url}/${name.toLowerCase()}.png`])
-          ))
-        })
-      })
-      .catch((error) => { console.log(error) })
-      .done()
+    this.setState({
+      data: OrderedMap(this.characters.sort().map(
+        (name, index) => ([name, `${config.assets.url}/${name.toLowerCase()}.png`])
+      ))
+    })
   }
 
   render() {
@@ -78,7 +59,6 @@ export default class CharacterList extends Component {
           <Content>
             {
               this.state.data.map((imageUrl, name) => {
-                console.log(imageUrl)
                 return (
                   <Character
                     key={name}
